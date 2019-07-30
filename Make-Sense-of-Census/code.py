@@ -31,17 +31,18 @@ race_2 = census[census[:,2] == 2]
 race_3 = census[census[:,2] == 3]
 race_4 = census[census[:,2] == 4]
 
+# Lenght of Race
 len_0 = len(race_0)
 len_1 = len(race_1)
 len_2 = len(race_2)
 len_3 = len(race_3)
 len_4 = len(race_4)
 
+# Minimum no. of citizens
 _temparr = [len_0,len_1,len_2,len_3,len_4]
 
+# Minority race
 minority_race = _temparr.index(min(_temparr))
-
-print (minority_race)
 
 
 
@@ -70,7 +71,6 @@ avg_pay_high= np.mean(high[:,7])
 print (avg_pay_high)
 
 #Average pay low
-
 avg_pay_low= np.mean(low[:,7])
 print (avg_pay_low)
 
