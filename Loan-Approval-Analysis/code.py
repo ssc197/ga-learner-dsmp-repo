@@ -59,18 +59,10 @@ percentage_nse = len(loan_approved_nse)/614*100;
 # --------------
 # code starts here
 
-loan_term = banks['Loan_Amount_Term'].apply(lambda x : x/12)
+loan_term = banks['Loan_Amount_Term'].apply(lambda x: int(x)/12 )
+big_loan_term=len(loan_term[loan_term>=25])
 
-#print (list(loan_term.columns.values))
-
-#print(loan_term)
-loan_term1 = loan_term.reset_index(name='loan_term')
-loan_term1.set_index('index',inplace=True)
-
-big_loan_term = len(loan_term1[loan_term1['loan_term']>=25])
-
-#print (loan_term[1:])
-print (big_loan_term)
+print(big_loan_term)
 # code ends here  
 
 
